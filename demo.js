@@ -1,6 +1,6 @@
 exports.doPayment = async (req, res) => {
     try{
-        const stripe = require('stripe')('sk_test_9Hv2yZ3MHzu38GxkcIKAikj6');
+        const stripe = require('stripe')('your stripe secret key');
         const session = await stripe.checkout.sessions.create({
             mode : 'payment',
             success_url : 'https://www.google.com/',
